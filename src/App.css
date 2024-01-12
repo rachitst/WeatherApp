@@ -1,38 +1,384 @@
-.App {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* General Styles */
+body {
+  background: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body a {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  text-decoration: none;
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Typography */
+h1 {
+  font-size: 5vw;
+  font-weight: 400;
+  color: #f9f9f9;
+  font-family: "Oxygen", sans-serif;
+  letter-spacing: 7px;
+  margin-top: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Containers */
+.container1,
+.container {
+  width: 90%;
+  margin: 5% auto;
+  border-radius: 20px;
+}
+
+/* City Section */
+.city {
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+  background: url("./images/city.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  border-radius: 20px;
+}
+.header{
+  display: flex;
+  align-items: start;
+  padding: 10px 5px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  float: rigth;
+  text-align: right;
+  padding: 5%;
+}
+
+.title h2 {
+  padding: 10px;
+  color: #ece6e6;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.title h3,
+.title h4 {
+  font-size: 2.5vw;
+  color: #090909;
+  font-weight: bold;
+  text-align: center;
+}
+
+.date-time {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 90%;
+  padding: 0 5% 1% 5%;
+  font-family: "Oxygen", sans-serif;
+}
+
+/* Temperature Section */
+div#txt,
+.dmy {
+  font-size: 3vw;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.temperature {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+
+.temperature p {
+  font-family: "Raleway", sans-serif;
+  font-size: 5vw;
+  font-weight: 100;
+  margin: 0 5%;
+}
+
+.temperature p span {
+  font-size: 3vw;
+  font-weight: 200;
+}
+
+/* Forecast Section */
+.forecast {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.cityHead {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forebox{
+  font-size: 20px;
+  background-color: #eee;
+  border-radius: 20px;
+  margin: 10px;
+  height: auto;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+}
+.today-weather ul li span {
+  float: right;
+  padding-right: 10px;
+}
+
+.today-weather ul li:nth-child(5) {
+  border-bottom: none;
+}
+
+.forecast-icon {
+  padding: 25px 0;
+}
+.forecast-item {
+  flex: 0 0 auto;
+  justify-content: center;
+  margin-right: 10px;
+  border: black;
+  background-color: #412ed0;
+  border-radius: 20px;
+  width: 100px; 
+  height: 140px; 
+}
+
+.horizontal-forecast {
+  display: flex;
+  overflow-x: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
+  .container,
+  .container1 {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 3vw;
+    margin-top: 5%;
+  }
+  div#txt {
+    font-size: 2.5vw;
+  }
+  .dmy {
+    padding-top: 2%;
+  }
+  .temperature p {
+    padding-bottom: 1%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.5vw;
+    letter-spacing: 2px;
+  }
+  .container {
+    margin-bottom: 5%;
+  }
+  .forecast-item {
+    margin: 5% 0 2%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 2vw;
+    line-height: 1.5em;
+    letter-spacing: 0;
+  }
+}
+
+/* Search Box and Footer */
+.search-box {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
+  position: relative;
+  z-index: 2;
+}
+.search-box .img-box {
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+.search-box img {
+  width: 60%;
+  cursor: pointer;
+  padding: 10px;
+  margin: 4px;
+}
+.search-box .search-bar {
+  border: none;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  border-bottom: 1px solid;
+  font-size: 2vw;
+  margin-right: 2%;
+  flex: 1; 
+}
+.search-box .search-bar::placeholder {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.search-bar:focus {
+  outline: none;
+  transition: all 1s ease-in-out;
+}
+.footer-info {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Mobile Icon */
+.mb-icon {
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 34%;
+  left: 36%;
+  z-index: 1;
+}
+
+.mb-icon p {
+  color: white;
+  width: fit-content;
+  position: relative;
+  left: 24%;
+  top: 2%;
+  font-size: 2vw;
 }
