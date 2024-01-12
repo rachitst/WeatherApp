@@ -224,7 +224,11 @@ div#txt,
   margin: 0;
 }
 .temp {
+<<<<<<< HEAD
   margin-left: 10px;
+=======
+  margin-left: 10px; 
+>>>>>>> ab8493675e457cbd04079493ee064d6e1fbce326
   float: left;
 }
 .forebox {
