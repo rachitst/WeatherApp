@@ -142,9 +142,9 @@ h1 {
   position: relative;
   border-radius: 20px;
 }
-.header{
+.header {
   display: flex;
-  align-items: start;
+  flex: start;
   padding: 10px 5px;
   margin: 10px;
   display: flex;
@@ -221,22 +221,41 @@ div#txt,
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
-.forebox{
+.temp {
+  margin-left: 10px;
+  float: left;
+}
+.forebox {
   font-size: 20px;
   background-color: #eee;
   border-radius: 20px;
-  margin: 10px;
+  margin: 0;
   height: auto;
   width: 30vw;
   display: flex;
   justify-content: center;
+  float: left;
 }
 .today-weather ul li span {
   float: right;
   padding-right: 10px;
+  align-items: left;
+  justify-content: space-between;
 }
 
+.today-weather ul li {
+  width: auto;
+  margin: 0 auto;
+  line-height: 39px;
+  border-width: thin;
+  border-bottom: 1px solid #777;
+  color: #0b0b0b;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 20px;
+}
 .today-weather ul li:nth-child(5) {
   border-bottom: none;
 }
@@ -251,8 +270,8 @@ div#txt,
   border: black;
   background-color: #412ed0;
   border-radius: 20px;
-  width: 100px; 
-  height: 140px; 
+  width: 100px;
+  height: 140px;
 }
 
 .horizontal-forecast {
@@ -347,7 +366,7 @@ div#txt,
   border-bottom: 1px solid;
   font-size: 2vw;
   margin-right: 2%;
-  flex: 1; 
+  flex: 1;
 }
 .search-box .search-bar::placeholder {
   color: white;

@@ -14,7 +14,7 @@ function WeatherCard(props) {
       .get(
         `${apiKeys.base}weather?q=${
           query !== "[object Object]" ? query : ""
-        }&units=metric&APPID=${apiKeys.key}`
+        }&units=metric&APPID=${apiKeys.key}`,
       )
       .then((response) => {
         setWeather(response.data);
@@ -38,6 +38,7 @@ function WeatherCard(props) {
   };
   useEffect(() => {
     handleSearch("delhi");
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -85,6 +86,7 @@ function WeatherCard(props) {
                 />
               </li>
               <li>
+                {" "}
                 Temperature{" "}
                 <span className="temp">
                   {Math.round(weather.main.temp)}°c ({weather.weather[0].main})
