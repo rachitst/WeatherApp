@@ -14,7 +14,7 @@ function WeatherCard(props) {
       .get(
         `${apiKeys.base}weather?q=${
           query !== "[object Object]" ? query : ""
-        }&units=metric&APPID=${apiKeys.key}`
+        }&units=metric&APPID=${apiKeys.key}`,
       )
       .then((response) => {
         setWeather(response.data);
@@ -85,22 +85,27 @@ function WeatherCard(props) {
                   alt=""
                 />
               </li>
-              <li> Temperature {" "}
+              <li>
+                {" "}
+                Temperature{" "}
                 <span className="temp">
                   {Math.round(weather.main.temp)}°c ({weather.weather[0].main})
                 </span>
               </li>
-              <li>Humidity{" "}
+              <li>
+                Humidity{" "}
                 <span className="temp">
                   {Math.round(weather.main.humidity)}%
                 </span>
               </li>
-              <li>Visibility{" "}
+              <li>
+                Visibility{" "}
                 <span className="temp">
                   {Math.round(weather.visibility)} mi
                 </span>
               </li>
-              <li>Wind Speed{"  "}
+              <li>
+                Wind Speed{"  "}
                 <span className="temp">
                   {Math.round(weather.wind.speed)} Km/h
                 </span>

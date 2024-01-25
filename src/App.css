@@ -142,7 +142,7 @@ h1 {
   position: relative;
   border-radius: 20px;
 }
-.header{
+.header {
   display: flex;
   flex: start;
   padding: 10px 5px;
@@ -224,10 +224,10 @@ div#txt,
   margin: 0;
 }
 .temp {
-  margin-left: 10px; 
+  margin-left: 10px;
   float: left;
 }
-.forebox{
+.forebox {
   font-size: 20px;
   background-color: #eee;
   border-radius: 20px;
@@ -270,8 +270,8 @@ div#txt,
   border: black;
   background-color: #412ed0;
   border-radius: 20px;
-  width: 100px; 
-  height: 140px; 
+  width: 100px;
+  height: 140px;
 }
 
 .horizontal-forecast {
@@ -366,7 +366,7 @@ div#txt,
   border-bottom: 1px solid;
   font-size: 2vw;
   margin-right: 2%;
-  flex: 1; 
+  flex: 1;
 }
 .search-box .search-bar::placeholder {
   color: white;
