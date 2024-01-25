@@ -5,7 +5,7 @@ import WeatherCard from "./WeatherCard";
 import loader from "../images/WeatherIcons.gif";
 const dateBuilder = (d) => {
   let months = [
-    "January",
+    "Jan",
     "February",
     "March",
     "April",
@@ -22,8 +22,8 @@ const dateBuilder = (d) => {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednesday",
-    "Thursday",
+    "Wed",
+    "Thurs",
     "Friday",
     "Saturday",
   ];
